@@ -8,6 +8,7 @@
     background-color: #1e1e1e;
     color: #ffffff;
     border: 2px solid #555;
+   
 }
 
 .dark-mode button {
@@ -33,19 +34,21 @@ button:hover {
 }
 
      .container{
-      width: 80vw;
+      width: 80%;
       background-color: rgb(53, 64, 74);
       margin-inline: auto;
+      padding: 50px 0;
 
     }
     .content{
         text-align: center;
-        width: 50%;
+        width: 80%;
         margin-inline: auto;
+      
     }
     input[type = "text"]{
         border: 2px solid #ccc;
-        width: 70%;
+        width: 100%;
         padding: 5px 0;
         box-shadow: 0 0 5px rgba(0, 123, 225, 0.5);
         transition: all 0.3s ease;
@@ -72,7 +75,7 @@ button:hover {
     }
 
     table{
-      width: 90%;
+      width: 85%;
       /* border: 2px solid red; */
       background-color: rgb(248, 246, 246);
       
@@ -86,7 +89,31 @@ button:hover {
    background-color: #868383;
    
     }
-    
+
+@media (max-width:700px) {
+    .container{
+        width: 100%;
+    }
+    .content{
+        width: 85%;
+    }
+    table{
+      width: 88%;
+      /* border: 2px solid red; */
+      background-color: rgb(248, 246, 246);
+      
+          /* padding: 45px 0px; */
+          text-align: center;
+          margin-inline: auto;
+    }
+    table tr th{
+   font-weight: 550;
+   font-size: 17px; 
+   background-color: #868383;
+   
+    }
+}
+ 
 </style>
 <!DOCTYPE html>
 <html lang="en">
@@ -98,11 +125,11 @@ button:hover {
 <body>
 <div class="container">
     <div class="content">
-        <button onclick="toggleDarkMode()" id="dark-mode-btn">Toggle Dark Mode</button>
+        <button onclick="toggleDarkMode()" id="dark-mode-btn">Dark Mode</button>
         <h2>NOTE APP</h2>
 
-    <input type="text" name="title" id="title"> <br> <br>
-    <input type="text" name="description" id="description"> <br> <br>
+    <input type="text" name="title" id="title" placeholder="Title.."> <br> <br>
+    <input type="text" name="description" id="description" placeholder="Description....."> <br> <br>
     <button onclick="addUpdate()" id="btn">Add</button> <br> <br>
 
     <input type="text" id="search" placeholder="search notes...">
