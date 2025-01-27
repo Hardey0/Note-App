@@ -1,0 +1,140 @@
+<style>
+    .dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode input[type="text"][type ='search'] {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 2px solid #555;
+}
+
+.dark-mode button {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode button:hover {
+    background-color: #555;
+}
+
+    button {
+    padding: 5px 10px;
+    /* background-color: red; */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+     .container{
+      width: 80vw;
+      background-color: rgb(53, 64, 74);
+      margin-inline: auto;
+
+    }
+    .content{
+        text-align: center;
+        width: 50%;
+        margin-inline: auto;
+    }
+    input[type = "text"]{
+        border: 2px solid #ccc;
+        width: 70%;
+        padding: 5px 0;
+        box-shadow: 0 0 5px rgba(0, 123, 225, 0.5);
+        transition: all 0.3s ease;
+
+
+    }
+    input[type = "text"]::placeholder{
+        color: #aaa;
+    }
+    #btn{
+        padding: 7px 30px;
+     border-radius: 14%;
+     outline: none;
+     border: 2px solid #aaa;
+     font-family: italic;
+     color: #de0f0fb6;
+     cursor: pointer;
+     margin-bottom: 30px;
+
+    }
+    #btn:hover{
+        background-color: rgb(65, 65, 216);
+        color: #000000;
+    }
+
+    table{
+      width: 90%;
+      /* border: 2px solid red; */
+      background-color: rgb(248, 246, 246);
+      
+          padding: 50px 0px;
+          text-align: center;
+          margin-inline: auto;
+    }
+    table tr th{
+   font-weight: 700;
+   font-size: 20px; 
+   background-color: #868383;
+   
+    }
+    
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <button onclick="toggleDarkMode()" id="dark-mode-btn">Toggle Dark Mode</button>
+        <h2>NOTE APP</h2>
+
+    <input type="text" name="title" id="title"> <br> <br>
+    <input type="text" name="description" id="description"> <br> <br>
+    <button onclick="addUpdate()" id="btn">Add</button> <br> <br>
+
+    <input type="text" id="search" placeholder="search notes...">
+    
+
+    
+    </div>
+
+    <div class="view">
+      <table>
+       <tr>
+        <th>
+            NO
+        </th>
+        <th>
+            TITLE
+        </th>
+        <th>
+            DESCRIPTION
+        </th>
+        <th>
+            ACTION
+        </th>
+       </tr>
+       <tr>
+        <tbody id="show">
+        </tbody>
+       </tr>
+      </table>
+    </div> 
+</div>
+
+</body>
+<script src="1.js"></script>
+</html>
